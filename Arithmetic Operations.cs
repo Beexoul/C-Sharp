@@ -1,5 +1,5 @@
+// Arithmetic Operations
 using System;
-
 class Program
 {
     static void Main()
@@ -11,7 +11,6 @@ class Program
         int product = a * b;
         int quotient = a / b;
         int remainder = a % b;
-
         Console.WriteLine("Sum: " + sum);
         Console.WriteLine("Difference: " + difference);
         Console.WriteLine("Product: " + product);
