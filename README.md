@@ -156,3 +156,208 @@ class Program
     }
 }
 ```
+8. **Add Two Number**
+```csharp
+using System;
+
+class AddNumbers
+{
+    static void Main()
+    {
+        Console.Write("Enter first number: ");
+        int num1 = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Enter second number: ");
+        int num2 = Convert.ToInt32(Console.ReadLine());
+
+        int sum = num1 + num2;
+
+        Console.WriteLine($"Sum: {sum}");
+    }
+}
+```
+
+9. **Factorial**
+```csharp
+using System;
+
+class FactorialCalc
+{
+    static void Main()
+    {
+        Console.Write("Enter a number: ");
+        int n = Convert.ToInt32(Console.ReadLine());
+
+        long factorial = 1;
+
+        for (int i = 1; i <= n; i++)
+        {
+            factorial *= i;
+        }
+
+        Console.WriteLine($"Factorial of {n}: {factorial}");
+    }
+}
+```
+
+10. **Simple Calculator**
+
+```csharp
+using System;
+
+class SimpleCalculator
+{
+    static void Main()
+    {
+        Console.Write("Enter first number: ");
+        double num1 = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("Enter operator (+, -, *, /): ");
+        char op = Convert.ToChar(Console.ReadLine());
+
+        Console.Write("Enter second number: ");
+        double num2 = Convert.ToDouble(Console.ReadLine());
+
+        double result = 0;
+
+        switch (op)
+        {
+            case '+':
+                result = num1 + num2;
+                break;
+            case '-':
+                result = num1 - num2;
+                break;
+            case '*':
+                result = num1 * num2;
+                break;
+            case '/':
+                result = num1 / num2;
+                break;
+            default:
+                Console.WriteLine("Invalid operator");
+                return;
+        }
+
+        Console.WriteLine($"Result: {result}");
+    }
+}
+```
+
+11. **Prime Number Checker**
+```csharp
+using System;
+
+class PrimeNumberCheck
+{
+    static void Main()
+    {
+        Console.Write("Enter a number: ");
+        int num = Convert.ToInt32(Console.ReadLine());
+
+        bool isPrime = true;
+
+        for (int i = 2; i <= Math.Sqrt(num); i++)
+        {
+            if (num % i == 0)
+            {
+                isPrime = false;
+                break;
+            }
+        }
+
+        if (isPrime)
+            Console.WriteLine($"{num} is a prime number.");
+        else
+            Console.WriteLine($"{num} is not a prime number.");
+    }
+}
+
+```
+12. **Fibonacci Series**
+
+```csharp
+using System;
+
+class FibonacciSeries
+{
+    static void Main()
+    {
+        Console.Write("Enter the number of terms: ");
+        int n = Convert.ToInt32(Console.ReadLine());
+
+        int firstTerm = 0, secondTerm = 1;
+
+        Console.WriteLine("Fibonacci Series:");
+
+        for (int i = 0; i < n; i++)
+        {
+            Console.Write($"{firstTerm} ");
+
+            int temp = firstTerm;
+            firstTerm = secondTerm;
+            secondTerm = temp + secondTerm;
+        }
+    }
+}
+```
+
+13. **Reverse a String**
+
+```csharp
+using System;
+
+class ReverseString
+{
+    static void Main()
+    {
+        Console.Write("Enter a string: ");
+        string input = Console.ReadLine();
+
+        char[] charArray = input.ToCharArray();
+        Array.Reverse(charArray);
+
+        string reversedString = new string(charArray);
+
+        Console.WriteLine($"Reversed string: {reversedString}");
+    }
+}
+```
+14. **Date and Time**
+```csharp
+using System;
+
+class DateTimeExample
+{
+    static void Main()
+    {
+        DateTime currentDateTime = DateTime.Now;
+
+        Console.WriteLine($"Current Date and Time: {currentDateTime}");
+        Console.WriteLine($"Day of Week: {currentDateTime.DayOfWeek}");
+    }
+}
+```
+
+15. **Palindrome Check**
+
+```csharp
+using System;
+
+class PalindromeCheck
+{
+    static void Main()
+    {
+        Console.Write("Enter a word: ");
+        string input = Console.ReadLine();
+
+        string reversed = new string(input.Reverse().ToArray());
+
+        if (input.Equals(reversed, StringComparison.OrdinalIgnoreCase))
+            Console.WriteLine($"{input} is a palindrome.");
+        else
+            Console.WriteLine($"{input} is not a palindrome.");
+    }
+}
+```
+
